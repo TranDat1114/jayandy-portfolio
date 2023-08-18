@@ -14,7 +14,7 @@ import { faBars, faPhone, faEnvelope, faCopyright } from "@fortawesome/free-soli
 import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
-
+import { ModeToggle } from "../theme/theme-button";
 
 interface navContent {
   title: string;
@@ -67,31 +67,39 @@ export function MobileMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className="p-4">
+        <Button variant={"default"}>
           <FontAwesomeIcon className="w-[16px]" icon={faBars} />
         </Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="w-10/12 md:w-[540px]">
         <SheetHeader className="text-left">
           <SheetTitle>Jay Andy</SheetTitle>
-          <SheetDescription className="text-primary font-light italic">
-            {greeting}, how are you doing?
-            <p>
-              I just wanted to say hi and let you know that you are a wonderful person and a great friend.
-            </p>
+          <SheetDescription >
+            <div className="grid grid-flow-row grid-cols-12">
+              <div className="col-span-10 text-foreground font-medium italic text-justify">
+                {greeting}, how are you doing?
+                <p>
+                  I just wanted to say hi and let you know that you are a wonderful person and a great friend.
+                </p>
+              </div>
+                <Separator orientation="vertical" className="ms-4" />
+              <div className="col-span-1">
+                <ModeToggle />
+              </div>
+            </div>
             <Separator className="my-4" />
           </SheetDescription>
         </SheetHeader>
         <div className="w-full">
           <div id="Link-section-1" className="flex flex-col space-y-2">
             <Link href={"/About"}>
-              <p className="text-lg text-foreground">About</p>
+              <p className="text-lg text-foreground">About ~ <em className="text-muted-foreground text-xs">Some information about me</em></p>
             </Link>
             <Link href={"/Portfolio"}>
-              <p className="text-lg text-foreground">Portfolio</p>
+              <p className="text-lg text-foreground">Portfolio ~ <em className="text-muted-foreground text-xs">Jay Andy</em></p>
             </Link>
             <Link href={"/Blog"}>
-              <p className="text-lg text-foreground">Blog</p>
+              <p className="text-lg text-foreground">Blogs ~ <em className="text-muted-foreground text-xs whitespace-nowrap">I was write some thing wanna read?</em></p>
             </Link>
           </div>
           <Separator className="my-2 w-9/12" />
@@ -101,7 +109,7 @@ export function MobileMenu() {
               {ListNavContents.map((navItem, index) => (
                 <Link className="text-left" key={index} href={navItem.href} target="_blank">
                   <div className="grid grid-flow-row grid-cols-6 gap-4 items-center">
-                    <FontAwesomeIcon className="w-[16px] text-primary col-span-1" icon={navItem.icon} />
+                    <FontAwesomeIcon className="w-[16px] text-foreground col-span-1" icon={navItem.icon} />
                     <p className="col-span-5 text-opacity-75 text-muted-foreground whitespace-nowrap">
                       {navItem.title}
                     </p>
@@ -112,15 +120,15 @@ export function MobileMenu() {
           </div>
           <Separator className="my-4" />
           <div className="fixed bottom-0 flex flex-row space-x-2 items-center">
-            <FontAwesomeIcon className="w-[16px] text-primary" icon={faCopyright} />
+            <FontAwesomeIcon className="w-[16px] text-foreground" icon={faCopyright} />
             <Link href={"https://twitter.com/DatTranM4"} className="text-muted-foreground whitespace-nowrap" target="_blank">
               Tran Phu Dat - 2023</Link>
           </div>
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <p className="text-base whitespace-nowrap text-primary font-light italic">
-              💕I hope you are happy today😊.
+            <p className="text-base text-foreground font-medium text-left">
+              💕 <em className="italic">I hope you are happy today</em> 😊.
             </p>
           </SheetClose>
         </SheetFooter>
