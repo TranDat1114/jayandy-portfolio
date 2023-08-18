@@ -22,9 +22,8 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen bg-background`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className='relative flex min-h-screen flex-col'>
-
               <Header />
-            <main>
+            <main className='px-4 min-h-max my-4 container'>
               {children}
             </main>
             <footer>
