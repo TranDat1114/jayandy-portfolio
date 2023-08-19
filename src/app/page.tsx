@@ -18,7 +18,8 @@ export default function Home() {
         </div>
 
       </div>
-      <div>
+      <div className="col-span-1 md:col-span-3 lg:col-span-6">
+        <div className="">
         <p className="text-lg font-normal mb-5">
           ~ Introduction
         </p>
@@ -26,6 +27,7 @@ export default function Home() {
           Say Hi from <strong className="text-primary">JayAndy</strong>, Software Developer
         </p>
         <em className="font-light text-muted-foreground">“I sometimes analyze, sometimes program, and sometimes design”</em>
+        </div>
       </div>
     </div>
   )

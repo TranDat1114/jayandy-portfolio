@@ -15,6 +15,5 @@ export function ProfileCard() {
   return (
     
         <Spline scene="https://prod.spline.design/WelaBCI-omiUF11x/scene.splinecode" />
-
     )
 }
