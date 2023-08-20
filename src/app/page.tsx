@@ -4,7 +4,7 @@ import Image from "next/image"
 import jayandy from "../../public/assets/jayandy.png"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { ProfileCard } from "@/components/mainPage/profileCard"
-
+import { HeroTextBanner } from "@/components/mainPage/heroTextBanner"
 
 export default function Home() {
 
@@ -19,15 +19,7 @@ export default function Home() {
 
       </div>
       <div className="col-span-1 md:col-span-3 lg:col-span-6">
-        <div className="">
-        <p className="text-lg font-normal mb-5">
-          ~ Introduction
-        </p>
-        <p className="text-4xl font-extrabold mb-10">
-          Say Hi from <strong className="text-primary">JayAndy</strong>, Software Developer
-        </p>
-        <em className="font-light text-muted-foreground">“I sometimes analyze, sometimes program, and sometimes design”</em>
-        </div>
+        <HeroTextBanner/>
       </div>
     </div>
   )
