@@ -14,14 +14,15 @@ export const metadata: Metadata = {
   applicationName: "Jay-Andy Portfolio",
   publisher: "Dat Tran",
   creator: "Dat Tran",
-  twitter:{
+  viewport: { width: "device-width", initialScale: 1, viewportFit: "auto" },
+  twitter: {
     title: "Jay-Andy Portfolio",
     description: "Jay Andy is a passionate and talented web developer. Please take a look at his portfolio to learn more about the amazing web projects he has done.",
     images: "https://twitter.com/DatTranM4/photo",
-    creator:"Dat Tran",
-    card:"summary_large_image"
+    creator: "Dat Tran",
+    card: "summary_large_image"
   },
-  keywords:["web developer", "UI design", "front-end", "back-end", "web tools", "frameworks", "full-stack", "software engineering", "Tran Dat", "dat tran", "jayandy", "jackandy","datran.online", "jayandy.id.vn","CSharp","coding","uxui","tranphudat","trandat"]
+  keywords: ["web developer", "UI design", "front-end", "back-end", "web tools", "frameworks", "full-stack", "software engineering", "Tran Dat", "dat tran", "jayandy", "jackandy", "datran.online", "jayandy.id.vn", "CSharp", "coding", "uxui", "tranphudat", "trandat"]
 }
 
 export default function RootLayout({
