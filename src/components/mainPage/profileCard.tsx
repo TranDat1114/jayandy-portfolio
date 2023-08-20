@@ -1,81 +1,28 @@
-"use client"
-import * as React from "react"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Icons } from "../icons/icons";
+import React from "react";
+import Image from "next/image";
+import anhThe from "../../../public/assets/img/anhthe.jpg"
+import jayAndy from "../../../public/assets/img/jayandy.png"
 
-import Spline from "@splinetool/react-spline"
-import { url } from "inspector";
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Reveal } from "../effect/reveal";
+import { ImageLoadingEffect } from "../effect/imageLoading";
 
 export function ProfileCard() {
+    return (
+        <div className="profile-card w-full h-full">
 
-  const [isSplineLoaded, setIsSplineLoaded] = React.useState(false);
-  const [isMouseOver, setIsMouseOver] = React.useState(false);
+            {/* <AspectRatio ratio={1 / 1} asChild className="bg-primary rounded-md">
+                    <Image
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover object-center w-full h-full"
+                        fill
+                        src={jayAndy}
+                        alt="JayAndy"
+                    />
+                </AspectRatio> */}
+            <ImageLoadingEffect imgRatio={1 / 1} imgSrc={anhThe.src} />
 
-
-
-  const handleSplineLoad = async () => {
-
-    setIsSplineLoaded(true);
-
-  };
-
-
-  return (
-
-    <div className="splineCur" onMouseOver={() => setIsMouseOver(true)} onMouseLeave={() => setIsMouseOver(false)}>
-
-      <Card className="w-full h-full">
-        <CardHeader className="m-auto font-bold">
-          <Reveal >
-            <CardTitle className="text-lg  text-primary">
-              <p>
-                Hire my master NOW!!! OINK🐷! Human
-              </p>
-            </CardTitle>
-          </Reveal>
-
-          <CardDescription>
-            <Reveal>
-              <p>
-                He will help you create beautiful websites
-              </p>
-            </Reveal>
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-
-          {isSplineLoaded ? (
-            <></>
-          ) : (
-            <Icons.spinner className="m-auto h-16 w-16 animate-spin" />
-          )}
-
-          <Spline
-            scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode"
-            onLoad={handleSplineLoad} />
-
-        </CardContent>
-        <CardFooter className="m-auto">
-
-          <Reveal>
-            <div className="text-lg font-bold text-primary">
-              {isMouseOver ? <p>OINK🐷 OINK🐷</p> : <p>💕💕💕</p>}
-            </div>
-          </Reveal>
-        </CardFooter>
-      </Card>
-
-    </div>
-  );
+        </div>
+    );
 }
-
-
-

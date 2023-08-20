@@ -4,7 +4,6 @@ import { Reveal } from "../effect/reveal";
 
 export function HeroTextBanner() {
     return (
-
         <div className="heroText">
             <Reveal>
                 <p className="text-lg font-normal mb-5">
