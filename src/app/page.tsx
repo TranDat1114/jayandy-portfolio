@@ -1,8 +1,3 @@
-
-
-import Image from "next/image"
-import jayandy from "../../public/assets/jayandy.png"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { ProfileCard } from "@/components/mainPage/profileCard"
 import { HeroTextBanner } from "@/components/mainPage/heroTextBanner"
 
@@ -19,7 +14,7 @@ export default function Home() {
 
       </div>
       <div className="col-span-1 md:col-span-3 lg:col-span-6">
-        <HeroTextBanner/>
+        <HeroTextBanner />
       </div>
     </div>
   )

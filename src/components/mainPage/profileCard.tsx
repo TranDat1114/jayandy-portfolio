@@ -1,11 +1,6 @@
 "use client"
 import * as React from "react"
 
-import { Icons } from "@/components/icons/icons"
-
-import Spline from '@splinetool/react-spline';
-
-
 export function ProfileCard() {
 
   // const [isSplineLoaded, setIsSplineLoaded] = React.useState(false);
