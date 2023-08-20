@@ -11,9 +11,32 @@ import {
 } from "@/components/ui/card"
 import Spline from '@splinetool/react-spline';
 
-export function ProfileCard() {
+export function LoadingScreen() {
   return (
-    
-        <Spline scene="https://prod.spline.design/WelaBCI-omiUF11x/scene.splinecode" />
-    )
+    <div className="loading-screen">
+      <h1>Loading...</h1>
+    </div>
+  );
 }
+
+export function ProfileCard() {
+  const [isSplineLoaded, setIsSplineLoaded] = React.useState(false);
+
+  const handleSplineLoad = () => {
+    setIsSplineLoaded(true);
+  };
+  return (
+    <>
+      {isSplineLoaded ? <></> : <LoadingScreen />}
+
+      <Spline
+        className="bg-transparent"
+        scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode"
+        onLoad={handleSplineLoad}
+      />
+
+    </>
+  );
+}
+
+
