@@ -6,13 +6,11 @@ export default function Home() {
 
   return (
     <>
-      <div id="hero-section-1" className='grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 relative'>
+      <div id="hero-section-1" className='grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 relative gap-5'>
         <div className="col-span-1 md:col-span-3 lg:col-span-6">
-          <div className="w-full h-[400px] lg:h-[500px]">
+          <div className="w-full">
             <ProfileCard />
-
           </div>
-
         </div>
         <div className="col-span-1 md:col-span-3 lg:col-span-6">
           <HeroTextBanner />

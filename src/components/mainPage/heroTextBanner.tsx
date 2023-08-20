@@ -18,7 +18,7 @@ export function HeroTextBanner() {
                 </p>
             </Reveal>
             <Reveal>
-                <em className="font-light text-muted-foreground">“I sometimes analyze, sometimes program, and sometimes design”</em>
+                <em className="font-light text-base text-muted-foreground">&quot;I sometimes analyze, sometimes program, and sometimes design&quot;</em>
             </Reveal>
         </div>
     );

@@ -18,7 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-
       <body className={`${inter.className} min-h-screen bg-background`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className='relative flex min-h-screen flex-col'>

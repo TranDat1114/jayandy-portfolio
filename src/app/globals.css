@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -60,18 +61,25 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .splineCur {
+    cursor: url(../../public/assets/cur/Carrot.cur), pointer;
+  }
+
 }
 
 @media (max-width: 768px) {
+
   /* Hide desktop-specific menu items on mobile devices */
   .desktop-menu {
-      display: none;
+    display: none;
   }
 }
 
 @media (min-width: 769px) {
+
   /* Hide mobile-specific menu items on desktop devices */
   .mobile-menu {
-      display: none;
+    display: none;
   }
 }
