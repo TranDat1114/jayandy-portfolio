@@ -1,10 +1,13 @@
 
+# Hi, I'm JayAndy! 👋
+
+
 # 😊 Jay-Andy Portfolio
 
 - Description: Basically, this is my portfolio and by the way, I just wanted to say hi and let you know that you are wonderful and and great person.
 
 
-### I'm Jay-Andy
+### Tran Phu Dat - Aka: Jay Andy
 ![Logo](https://pbs.twimg.com/profile_images/1673324652343558145/NHOON7xx_400x400.jpg)
 
 
