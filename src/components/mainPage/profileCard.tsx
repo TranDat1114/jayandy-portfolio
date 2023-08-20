@@ -1,10 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import anhThe from "../../../public/assets/img/anhthe.jpg"
-import jayAndy from "../../../public/assets/img/jayandy.png"
 
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { Reveal } from "../effect/reveal";
 import { ImageLoadingEffect } from "../effect/imageLoading";
 
 export function ProfileCard() {

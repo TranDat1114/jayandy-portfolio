@@ -36,9 +36,8 @@ export function MobileMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant={"default"} size={"sm"}>
-
-          <FontAwesomeIcon className="w-[16px] h-[16px]" icon={faBars} />
+        <Button variant={"default"} size={"icon"}>
+          <FontAwesomeIcon className="w-[1.2rem] h-[1.2rem]" icon={faBars} />
         </Button>
       </SheetTrigger>
       <SheetContent className="w-11/12 md:w-[540px]">
@@ -46,9 +45,9 @@ export function MobileMenu() {
           <SheetTitle>Jay Andy</SheetTitle>
           <SheetDescription >
             <div className="grid grid-flow-row grid-cols-12">
-              <div className="col-span-10 text-foreground font-medium text-justify drop-shadow-lg">
+              <div className="col-span-9 text-foreground font-normal font-serif text-justify text-base">
                 {greeting}. 👋
-                <p>
+                {/* <p>
                   <em className="italic">
                     Oh! I just wanted to say hi and let you know that you are wonderful
                   </em>
@@ -57,10 +56,10 @@ export function MobileMenu() {
                     and great person.
                   </em>
                   😻
-                </p>
+                </p> */}
               </div>
               <Separator orientation="vertical" className="ms-4" />
-              <div className="col-span-1">
+              <div className="col-span-2 flex justify-center">
                 <ModeToggle />
               </div>
             </div>
@@ -70,13 +69,13 @@ export function MobileMenu() {
         <div className="w-full">
           <div id="Link-section-1" className="flex flex-col space-y-2">
             <Link href={"/About"}>
-              <p className="text-base font-semibold text-foreground">About ~ <em className="text-muted-foreground text-xs">Some information about me</em></p>
+              <p className="text-base font-semibold text-foreground">About ~ <em className="text-muted-foreground text-xs font-serif">Some information about me</em></p>
             </Link>
             <Link href={"/Portfolio"}>
-              <p className="text-base font-semibold text-foreground">Portfolio ~ <em className="text-muted-foreground text-xs">Jay Andy</em></p>
+              <p className="text-base font-semibold text-foreground">Portfolio ~ <em className="text-muted-foreground text-xs font-serif">Jay Andy</em></p>
             </Link>
             <Link href={"/Blog"}>
-              <p className="text-base font-semibold text-foreground">Blogs ~ <em className="text-muted-foreground text-xs whitespace-nowrap">I was write some thing, wanna read?</em></p>
+              <p className="text-base font-semibold text-foreground">Blogs ~ <em className="text-muted-foreground text-xs whitespace-nowrap font-serif">I was write some thing, wanna read?</em></p>
             </Link>
           </div>
           <Separator className="my-2 w-9/12" />
@@ -90,7 +89,7 @@ export function MobileMenu() {
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <p className="text-base text-foreground font-medium text-left">
+            <p className="text-base text-foreground font-normal font-serif text-left">
               💕 <em className="italic">I hope you are happy today</em> 😊.
             </p>
           </SheetClose>

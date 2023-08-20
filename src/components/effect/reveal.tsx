@@ -22,10 +22,8 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
     })
 
     return (
-        <div ref={ref} style={{
-            position: "relative", width, overflow: "hidden"
-        }}>
-            <motion.div ref={ref}
+        <div ref={ref} className="w-fit relative overflow-hidden" >
+            <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 75 },
                     visible: { opacity: 1, y: 0 }
@@ -44,15 +42,7 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
                 initial={"hidden"}
                 animate={slideControls}
                 transition={{ duration: .5, ease: "easeIn" }}
-                style={{
-                    position: "absolute",
-                    top: 4,
-                    bottom: 4,
-                    left: 0,
-                    right: 0,
-                    background: "hsl(var(--primary))",
-                    zIndex: 20,
-                }}
+                className="absolute top-2 bottom-2 left-0 right-0 z-20 bg-primary"
             />
         </div>
     )

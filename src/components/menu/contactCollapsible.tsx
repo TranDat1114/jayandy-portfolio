@@ -13,6 +13,7 @@ import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-ic
 import { faPhone, faEnvelope, faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
+import { Separator } from "../ui/separator"
 
 
 interface navContent {
@@ -62,19 +63,24 @@ export function ContactDropDownMenu() {
             onOpenChange={setIsOpen}
             className="w-full space-y-2"
         >
-            <div className="flex items-center justify-between">
-                <CollapsibleTrigger asChild>
-                    <p className="text-base font-semibold text-foreground w-full">
-                        Contact
-                    </p>
-                </CollapsibleTrigger>
+            <div className="grid grid-flow-row grid-cols-12 items-center">
+                <div className="col-span-9">
 
-                <CollapsibleTrigger asChild>
-                    <Button variant="default" size="sm">
-                        <FontAwesomeIcon className="w-[16px] h-[16px]" icon={(isOpen ? faAngleUp : faAngleDown)} />
-                        <span className="sr-only">Toggle</span>
-                    </Button>
-                </CollapsibleTrigger>
+                    <CollapsibleTrigger asChild>
+                        <p className="text-base font-semibold text-foreground w-full">
+                            Contact
+                        </p>
+                    </CollapsibleTrigger>
+                </div>
+                <Separator orientation="vertical" className="ms-4" />
+                <div className="col-span-2 flex justify-center">
+                    <CollapsibleTrigger asChild>
+                        <Button variant="default" size="icon">
+                            <FontAwesomeIcon className="h-[1.2rem] w-[1.2rem]" icon={(isOpen ? faAngleUp : faAngleDown)} />
+                            <span className="sr-only">Toggle</span>
+                        </Button>
+                    </CollapsibleTrigger>
+                </div>
             </div>
             <CollapsibleContent className="space-y-2">
                 {ListNavContents.map((navItem, index) => (
