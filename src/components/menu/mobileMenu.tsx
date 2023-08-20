@@ -82,9 +82,8 @@ export function MobileMenu() {
           <ContactDropDownMenu />
           <Separator className="my-4" />
           <div className="fixed bottom-5 flex flex-row space-x-2 items-center">
-            <FontAwesomeIcon className="w-[16px] h-[16px] text-foreground" icon={faCopyright} />
             <Link href={"https://twitter.com/DatTranM4"} className="text-muted-foreground whitespace-nowrap" target="_blank">
-              Tran Phu Dat - 2023</Link>
+              Dat Tram - <FontAwesomeIcon className="w-[16px] h-[16px] text-foreground" icon={faCopyright} /> 2023</Link>
           </div>
         </div>
         <SheetFooter>
