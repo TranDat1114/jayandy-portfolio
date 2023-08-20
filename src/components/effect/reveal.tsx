@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion"
 
 interface Props {
-    children: React.ReactNode,
+    children: JSX.Element,
     width?: "fit-content" | "100%"
 }
 
@@ -14,11 +14,11 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
     const slideControls = useAnimation();
 
     useEffect(() => {
-        if (!isInView) {
+        if (isInView) {
             mainControls.start("visible")
             slideControls.start("visible")
         }
-    },[isInView, mainControls, slideControls])
+    })
 
     return (
         <div style={{
