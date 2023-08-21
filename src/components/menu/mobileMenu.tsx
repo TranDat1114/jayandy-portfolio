@@ -83,7 +83,7 @@ export function MobileMenu() {
           <Separator className="my-4" />
           <div className="fixed bottom-5 flex flex-row space-x-2 items-center">
             <Link href={"https://twitter.com/DatTranM4"} className="text-muted-foreground whitespace-nowrap" target="_blank">
-              Dat Tram - <FontAwesomeIcon className="w-[16px] h-[16px] text-foreground" icon={faCopyright} /> 2023</Link>
+              Dat Tran - <FontAwesomeIcon className="w-[16px] h-[16px] text-foreground" icon={faCopyright} /> 2023</Link>
           </div>
         </div>
         <SheetFooter>
