@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Jay-Andy Portfolio",
     description: "Jay Andy is a passionate and talented web developer. Please take a look at his portfolio to learn more about the amazing web projects he has done.",
-    images: "https://twitter.com/DatTranM4/photo",
+    images: "https://pbs.twimg.com/profile_images/1673324652343558145/NHOON7xx_400x400.jpg",
     creator: "Dat Tran",
     card: "summary_large_image"
   },
