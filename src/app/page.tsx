@@ -18,11 +18,11 @@ export default function Home() {
         </div>
       </div>
       <div id="hero-section-2" className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 relative gap-5">
-        <div className="col-span-1 md:col-span-3 lg:col-span-6">
+        <div className="col-span-1 md:col-span-2 lg:col-span-5">
           <div className="w-full">
           </div>
         </div>
-        <div className="col-span-1 md:col-span-3 lg:col-span-6">
+        <div className="col-span-1 md:col-span-4 lg:col-span-7">
           <PigCard />
         </div>
       </div>

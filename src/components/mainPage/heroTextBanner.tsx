@@ -52,13 +52,13 @@ export function HeroTextBanner() {
                     ~ Contact Social Profile
                 </p>
             </Reveal>
-            <div className="grid grid-flow-row grid-cols-4 items-center gap-4 justify-center">
+            <div className="grid grid-flow-row grid-cols-5 items-center gap-4 justify-center">
                 {
                     ContactLinks.map((link, index) => (
-                        <Link key={index} href={link.href} className="col-span-1">
+                        <Link key={index} href={link.href} target="_blank" className="col-span-1">
                             <Reveal>
                                 <div className="grid grid-flow-row grid-row-2 items-center justify-center gap-4">
-                                    <FontAwesomeIcon className="row-span-1 text-3xl lg:text-6xl m-auto" icon={link.icon} />
+                                    <FontAwesomeIcon className="row-span-1 text-3xl lg:text-4xl m-auto" icon={link.icon} />
 
                                     <p className="row-span-1 text-center lg:text-2xl " >{link.title}</p>
                                 </div>
