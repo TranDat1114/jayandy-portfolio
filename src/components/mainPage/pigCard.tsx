@@ -40,7 +40,7 @@ export function PigCard() {
       <Reveal>
         <p className="text-4xl font-bold text-pink-500">PIGGY</p>
       </Reveal>
-      <Separator />
+      <Separator  className="my-4"/>
       <div className="splineCur" onMouseOver={() => setIsMouseOver(true)} onMouseLeave={() => setIsMouseOver(false)}>
 
         <Card>
@@ -53,7 +53,7 @@ export function PigCard() {
               </Reveal>
             </CardTitle>
           </CardHeader>
-          <CardContent className="min-h-[375px] lg:h-full lg:w-full">
+          <CardContent>
             {isSplineLoaded ? (
               <></>
             ) : (
@@ -68,7 +68,7 @@ export function PigCard() {
               animate={mainControls}
               transition={{ duration: .5, delay: .25 }}
             >
-              <Spline
+              <Spline className="w-full h-full"
                 scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode"
                 onLoad={handleSplineLoad}
               />
