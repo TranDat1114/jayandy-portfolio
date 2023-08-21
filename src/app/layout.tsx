@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '@/components/layout/header'
 import Head from 'next/head';
+import { BreadCrumb } from '@/components/layout/breadCrumb'
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Jay-Andy Portfolio",
     description: "Jay Andy is a passionate and talented web developer. Please take a look at his portfolio to learn more about the amazing web projects he has done.",
-    images: "https://twitter.com/DatTranM4/photo",
+    images: "https://pbs.twimg.com/profile_images/1673324652343558145/NHOON7xx_400x400.jpg",
     creator: "Dat Tran",
     card: "summary_large_image"
   },
@@ -36,6 +37,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className='relative flex min-h-screen flex-col'>
             <Header />
+            <BreadCrumb></BreadCrumb>
             <main className='px-4 min-h-max my-4 container'>
               {children}
             </main>

@@ -1,7 +1,7 @@
 export function DesktopMenu() {
     return (
         <>
-        <p>Is now developing...</p>
+        <p>Desktop navigation is now developing...</p>
         </>
     )
 }
