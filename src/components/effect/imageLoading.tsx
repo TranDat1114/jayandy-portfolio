@@ -10,9 +10,6 @@ interface Props {
 
 const ImageLoadingEffect = ({ imgSrc, imgRatio }: Props) => {
 
-    const [imageLoading, setImageLoading] = useState(true);
-    const [pulsing, setPulsing] = useState(true);
-
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
     const mainControls = useAnimation();

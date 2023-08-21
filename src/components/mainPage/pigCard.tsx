@@ -13,26 +13,32 @@ import { Icons } from "../icons/icons";
 import Spline from "@splinetool/react-spline"
 import { Reveal } from "../effect/reveal";
 import { Separator } from "../ui/separator";
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export function PigCard() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
-  const [isLoaded, setIsLoaded] = React.useState(false);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  })
   const [isSplineLoaded, setIsSplineLoaded] = React.useState(false);
 
   const [isMouseOver, setIsMouseOver] = React.useState(false);
 
-  const handleSplineLoad = async () => {
+  const handleSplineLoad = () => {
     setIsSplineLoaded(true);
   };
   return (
     <>
       <Reveal>
-        <p className="text-4xl" onProgress={async () => {
-          console.log("fuck Yeah")
-          setTimeout(() => {
-            setIsLoaded(true)
-          }, 1000)
-        }}>PIGGY</p>
+        <p className="text-4xl font-bold text-pink-500">PIGGY</p>
       </Reveal>
       <Separator />
       <div className="splineCur" onMouseOver={() => setIsMouseOver(true)} onMouseLeave={() => setIsMouseOver(false)}>
@@ -53,13 +59,21 @@ export function PigCard() {
             ) : (
               <Icons.spinner className="m-auto h-16 w-16 animate-spin" />
             )}
-            <div >
-              {/* <Spline className={`${isLoaded ? "block" : "hidden"}`}
+            <motion.div ref={ref}
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: .5, delay: .25 }}
+            >
+              <Spline
                 scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode"
                 onLoad={handleSplineLoad}
-              /> */}
-               <Spline scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode" />
-            </div>
+              />
+              {/* <Spline scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode" /> */}
+            </motion.div>
 
           </CardContent>
           <CardFooter className="flex justify-center flex-col">

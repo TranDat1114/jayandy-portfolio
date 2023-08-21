@@ -14,7 +14,7 @@ export function HeroTextBanner() {
     return (
         <div className="heroText">
             <Reveal>
-                <p className="text-lg lg:text-xl font-normal mb-5">
+                <p className="text-primary text-lg lg:text-xl font-bold mb-5">
                     ~ Introduction
                 </p>
             </Reveal>
@@ -37,18 +37,18 @@ export function HeroTextBanner() {
             </Reveal>
             <Separator className="my-2 lg:my-4" />
             <Reveal>
-                <p className="font-light text-base lg:text-2xl text-muted-foreground text-justify font-serif">
+                <em className="font-light text-base lg:text-2xl text-muted-foreground text-justify font-serif">
                     My real Vietnamese name is Tran Phu Dat but you can call me Jay or Andy, I&apos;m full-stack developer based in Ho Chi Minh city, Vietnam.
-                </p>
+                </em>
             </Reveal>
             <Reveal>
-                <p className="font-light text-base lg:text-2xl text-muted-foreground text-justify font-serif">
+                <em className="font-light text-base lg:text-2xl text-muted-foreground text-justify font-serif">
                     By the way, nice to meet you and welcome to my personal portfolio.
-                </p>
+                </em>
             </Reveal>
             <Separator className="my-4" />
             <Reveal>
-                <p className="text-lg lg:text-xl font-normal mb-3 lg:mb-6">
+                <p className="text-primary text-lg lg:text-xl font-bold mb-3 lg:mb-6">
                     ~ Contact Social Profile
                 </p>
             </Reveal>

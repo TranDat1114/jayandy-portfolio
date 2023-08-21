@@ -29,7 +29,7 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
                     visible: { opacity: 1, y: 0 }
                 }}
                 initial="hidden"
-                animate="visible"
+                animate={mainControls}
                 transition={{ duration: .5, delay: .25 }}
             >
                 {children}
