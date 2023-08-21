@@ -26,11 +26,6 @@ const ImageLoadingEffect = ({ imgSrc, imgRatio }: Props) => {
         }
     })
 
-    // function imageLoaded() {
-    //     console.log("helo")
-    //     setImageLoading(false);
-    //     setTimeout(() => setPulsing(false), 600);
-    // };
     return (
         <AspectRatio ref={ref} ratio={imgRatio} className="w-full relative overflow-hidden rounded-md">
             <motion.img className="w-full"

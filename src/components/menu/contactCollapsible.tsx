@@ -9,50 +9,23 @@ import {
     CollapsibleContent,
     CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faPhone, faEnvelope, faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { Separator } from "../ui/separator"
-
-
-interface navContent {
-    title: string;
-    href: string;
-    icon?: any;
-}
+import { ContactLinks, navContent, } from "../type/types"
 
 export function ContactDropDownMenu() {
 
-
-    //Contact link
-    const ListNavContents: navContent[] = [
-        {
-            title: "Phone: +84 347647846",
-            href: "tel:+84347647856",
-            icon: faPhone,
-        },
-        {
-            title: "Email: dattranphu1114@gmail.com",
-            href: "mailto:dattranphu1114@gmail.com",
-            icon: faEnvelope
-        },
-        {
-            title: "Twitter",
-            href: "https://twitter.com/DatTranM4",
-            icon: faTwitter
-        },
-        {
-            title: "Github",
-            href: "https://github.com/TranDat1114",
-            icon: faGithub
-        },
-        {
-            title: "LinkedIn",
-            href: "https://www.linkedin.com/in/tran-phu-dat-526a82288",
-            icon: faLinkedin
-        }
-    ]
+    const ListNavContents: navContent[] = [...ContactLinks, {
+        title: "Phone: +84 347647846",
+        href: "tel:+84347647856",
+        icon: faPhone,
+    }, {
+        title: "Email: dattranphu1114@gmail.com",
+        href: "mailto:dattranphu1114@gmail.com",
+        icon: faEnvelope
+    }];
 
     const [isOpen, setIsOpen] = React.useState(true)
 

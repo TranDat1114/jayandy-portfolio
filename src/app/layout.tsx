@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '@/components/layout/header'
 import Head from 'next/head';
+import { BreadCrumb } from '@/components/layout/breadCrumb'
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className='relative flex min-h-screen flex-col'>
             <Header />
+            <BreadCrumb></BreadCrumb>
             <main className='px-4 min-h-max my-4 container'>
               {children}
             </main>
