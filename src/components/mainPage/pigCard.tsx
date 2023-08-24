@@ -1,5 +1,5 @@
 "use client"
-import * as React from "react"
+
 import {
   Card,
   CardContent,
@@ -10,12 +10,12 @@ import {
 } from "@/components/ui/card"
 import { Icons } from "../icons/icons";
 
-import Spline from "@splinetool/react-spline"
 import { Reveal } from "../effect/reveal";
 import { Separator } from "../ui/separator";
-import { useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-
+import React from "react";
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
 export function PigCard() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
@@ -40,7 +40,7 @@ export function PigCard() {
       <Reveal>
         <p className="text-4xl font-bold text-pink-500">PIGGY</p>
       </Reveal>
-      <Separator  className="my-4"/>
+      <Separator className="my-4" />
       <div className="splineCur" onMouseOver={() => setIsMouseOver(true)} onMouseLeave={() => setIsMouseOver(false)}>
 
         <Card>
@@ -54,11 +54,7 @@ export function PigCard() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {isSplineLoaded ? (
-              <></>
-            ) : (
-              <Icons.spinner className="m-auto h-16 w-16 animate-spin" />
-            )}
+
             <motion.div ref={ref}
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -68,10 +64,13 @@ export function PigCard() {
               animate={mainControls}
               transition={{ duration: .5, delay: .25 }}
             >
-              <Spline className="w-full h-full"
-                scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode"
-                onLoad={handleSplineLoad}
-              />
+              <Suspense fallback={<Icons.spinner className="m-auto h-16 w-16 animate-spin" />}>
+
+                <Spline className="w-full h-full"
+                  scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode"
+
+                />
+              </Suspense>
               {/* <Spline scene="https://prod.spline.design/JJBz8kYzQd93Wvab/scene.splinecode" /> */}
             </motion.div>
 
