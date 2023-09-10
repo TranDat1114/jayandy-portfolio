@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className="grid grid-flow-row gap-y-20 grid-cols-1 lg:my-6">
-      <div id="hero-section-1" className='grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 relative gap-5'>
+      <div id="hero-section-1" className='grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 relative gap-20'>
         <div className="col-span-1 md:col-span-3 lg:col-span-6">
           <div className="w-full">
             <ProfileCard />

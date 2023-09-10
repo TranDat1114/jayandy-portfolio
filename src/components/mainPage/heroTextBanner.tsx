@@ -20,7 +20,7 @@ export function HeroTextBanner() {
                 <Reveal>
                     <div>
                         <p className="text-xl">
-                            Hi I&apos;m
+                            Hi I&#39;m
                         </p>
                         <strong className="text-primary">Jay Andy</strong>
                     </div>
@@ -39,7 +39,7 @@ export function HeroTextBanner() {
             <Typical
                 steps={[
                   "My real Vietnamese name is Tran Phu Dat but you can call me Jay or Andy.", 1500,
-                  "I&apos;m full-stack developer based in Ho Chi Minh city, Vietnam.", 1500,
+                  "I'm full-stack developer based in Ho Chi Minh city, Vietnam.", 1500,
                   "Hi", 1500
                 ]}
                 loop={Infinity}

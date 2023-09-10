@@ -1,5 +1,5 @@
 import React from "react";
-import anhThe from "../../../public/assets/img/anhthe.jpg"
+import anhThe from "../../../public/assets/img/anh.jpg"
 
 import { ImageLoadingEffect } from "../effect/imageLoading";
 

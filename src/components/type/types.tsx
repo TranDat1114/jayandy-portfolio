@@ -7,7 +7,6 @@ interface navContent {
 import { faFacebook, faGithub, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 //Contact link
 const ContactLinks: navContent[] = [
-       
     {
         title: "Twitter",
         href: "https://twitter.com/DatTranM4",
