@@ -43,6 +43,8 @@
     + Microsoft Sql Server
     + My Sql
     + Sql Lite
+    + PostgresSQL
+
 
 ## 👌 Demo
 
